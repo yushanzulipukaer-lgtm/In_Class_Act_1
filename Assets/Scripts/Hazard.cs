@@ -2,14 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Hazard : MonoBehaviour
+public class Hazard : PlayerTrigger
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected override void OnPlayerEnter()
     {
-        // Condition 4: Touch hazard = lose
-        if (collision.CompareTag("Player"))
-        {
-            GameManager.instance.LoseGame();
-        }
-    }
+        GameManager.instance.LoseGame();
+    }  
+
 }

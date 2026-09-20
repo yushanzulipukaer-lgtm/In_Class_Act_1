@@ -7,8 +7,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    public TextMeshProUGUI winText;
-    public TextMeshProUGUI loseText;
+    [SerializeField] private TextMeshProUGUI winText;
+    [SerializeField] private TextMeshProUGUI loseText;
 
     private bool gameEnded = false;
 

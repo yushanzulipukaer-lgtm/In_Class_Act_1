@@ -2,14 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Goal : MonoBehaviour
+public class Goal : PlayerTrigger
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected override void OnPlayerEnter()
     {
-        // Condition 6: Reach goal = win
-        if (collision.CompareTag("Player"))
-        {
-            GameManager.instance.WinGame();
-        }
+        GameManager.instance.WinGame();
     }
 }
