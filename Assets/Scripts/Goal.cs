@@ -6,6 +6,6 @@ public class Goal : PlayerTrigger
 {
     protected override void OnPlayerEnter()
     {
-        GameManager.instance.WinGame();
+        GameManager.Instance.WinGame();
     }
 }

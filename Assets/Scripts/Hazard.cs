@@ -6,7 +6,7 @@ public class Hazard : PlayerTrigger
 {
     protected override void OnPlayerEnter()
     {
-        GameManager.instance.LoseGame();
+        GameManager.Instance.LoseGame();
     }  
 
 }

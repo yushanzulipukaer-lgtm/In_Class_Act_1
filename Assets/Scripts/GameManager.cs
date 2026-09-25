@@ -3,19 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class GameManager : MonoBehaviour
+public class GameManager : Singleton<GameManager>
 {
-    public static GameManager instance;
-
     [SerializeField] private TextMeshProUGUI winText;
     [SerializeField] private TextMeshProUGUI loseText;
 
     private bool gameEnded = false;
-
-    void Awake()
-    {
-        instance = this;
-    }
 
     void Start()
     {

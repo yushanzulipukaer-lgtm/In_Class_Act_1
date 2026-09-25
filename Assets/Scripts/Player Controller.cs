@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
 
         if(transform.position.y < -10)
         {
-            GameManager.instance.LoseGame();
+            GameManager.Instance.LoseGame();
         }
     }
 
